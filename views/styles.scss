@@ -1,0 +1,112 @@
+$red: #903;
+$black: #444;
+$white: #fff;
+$main-font: Helvetica, Arial, sans-serif;
+//$background:blue;
+//$color:red;
+
+body {
+  font-family: $main-font;
+  margin:0; padding:0;
+  background:dodgerblue;
+  border: 0;
+}
+
+h1,h2,h3,h4,h5{padding-top:10px; margin:0}
+
+header{ margin: 0;padding:0; height:100%;background-size: cover;}
+
+#banner{font-size:100px;font-weight: bold;}
+
+p{margin:0;padding:0; float: left;}
+
+section{background: url(../images/music.jpg);background-size: cover;height: 100%;margin-top: 0 !important;clear:both}
+
+@mixin tabs ($background:blue, $color: yellow){
+  ul {
+      clear:left;
+      float: left;
+      position: relative;
+      list-style: none;
+      background:$background;
+      overflow: hidden;
+      text-align: center;
+      width: 100%;
+  }
+  li{display: block;
+   float:left; width:100px;
+  }
+}
+.a {margin: 0 auto;
+  width:100%;
+  text-decoration:none;
+  padding:8px;
+  background: black;
+  color:white;
+  text-align: center;
+  border-radius: 1px 10px 10px 10px;
+//  &:hover{background:darken(black, 20%)}
+}
+
+#navigation{clear: both; width: 100%; font-weight: bold;text-align: center;background: black;
+  @include tabs ($background: $black, $color: $white);
+ }
+
+p {
+  font: 13px/1.4 $main-font;
+}
+
+h1{text-align: center; color:black}
+
+textarea{width:165px; height:100px; border-radius: 1px 10px 10px 10px;}
+
+.form{margin:50px auto;background: url(../images/nusic.jpg);
+     background-size:cover;
+    border-radius: 1px 10px 10px 10px;
+    -moz-border-radius: 1px 10px 10px 10px;
+    -webkit-border-radius: 1px 10px 10px 10px;
+    border: 0px solid #000000;
+    width: 170px;
+    -webkit-box-shadow: -1px 0px 5px 1px rgba(245,226,12,1);
+    -moz-box-shadow: -1px 0px 5px 1px rgba(245,226,12,1);
+    box-shadow: -1px 0px 5px 1px rgba(245,226,12,1);
+    padding: 20px;}
+
+input{border-radius: 1px 10px 10px 10px;}
+
+#new-song{background: none;margin:0 auto;width:50px; height:50px;
+          border-radius: 1px 10px 10px 10px;
+          -moz-border-radius: 1px 10px 10px 10px;
+          -webkit-border-radius: 1px 10px 10px 10px;
+          border: 0px solid #000000;display: block;
+          padding:0;}
+
+#add-song{width:50px; height:50px;background: wheat;border-radius: 1px 1px 10px 1px;
+          -moz-border-radius: 1px 1px 10px 1px;margin: 0 auto;
+          -webkit-border-radius: 1px 1px 10px 1px;
+          box-shadow: -1px 0px 5px 1px rgba(0,0,0,1);
+          }
+
+img{float: left; height: 150px; width:150px;
+  margin: 0;padding: 0}
+
+div{margin: 0 auto; width: 625px;}
+
+.song-list{background: none;margin: 0 auto; width: 30%; color:black; background: wheat;
+border-radius: 1px 1px 10px 1px;display: block;
+  -moz-border-radius: 1px 1px 10px 1px;text-decoration:none;
+  -webkit-border-radius: 1px 1px 10px 1px;padding:8px;
+  box-shadow: -1px 0px 5px 1px rgba(0,0,0,1);}
+
+ol{margin: 0; padding: 0}
+
+//a {margin: 0 auto;
+//  width:100%;
+//
+//
+//  background: black;
+//  color:white;
+//  text-align: center;
+//  border-radius: 1px 10px 10px 10px;
+//  //  &:hover{background:darken(black, 20%)}
+//}

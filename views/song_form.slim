@@ -1,0 +1,17 @@
+label for="title"
+
+input#title type="text" placeholder="Title" name="song[title]" value="#{@song.title}"
+
+label for="length"
+
+input#length type="number" placeholder="Length" name="song[length]" value="#{@song.length}"
+
+ label for="release_on"
+
+input#released_on type="text" placeholder="Date(mm/dd/yy)" name="song[released_on]" value="#{@song.released_on.strftime("%m%d%Y") if @song.released_on}"
+
+label for="lyrics"
+
+textarea#lyrics placeholder="Lyrics"  name="song[lyrics]" == @song.lyrics
+
+input type="submit" value="Save Song"

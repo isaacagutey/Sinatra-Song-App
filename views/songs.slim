@@ -1,0 +1,9 @@
+h1 Songs
+a id="new-song" href="/songs/new"
+  img id="add-song" src="./images/add_song.png"
+- if @songs.any?
+  #songs
+    - @songs.each do |song|
+      a class="song-list" href="/songs/#{song.id}" #{song.id}. #{song.title}
+- else
+  p No songs have been created yet!

@@ -1,0 +1,2 @@
+require './mian'
+run Sinatra::Application

@@ -1,0 +1,13 @@
+h1=@song.title
+h2 Release Date: #{@song.released_on.strftime("%e %B %Y") if @song.released_on}
+h2 Length: #{@song.length/60}:#{@song.length%60}
+pre= @song.lyrics
+h3
+  a href="/songs" Back to songs index
+
+h3
+  a href="/songs/#{@song.id}/edit" Edit this song
+
+form action="/songs/#{@song.id}" method="POST"
+  input type="hidden" name="_method" value="DELETE"
+  input type="submit" value="delete this song"

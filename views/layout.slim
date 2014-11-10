@@ -1,0 +1,20 @@
+doctype html
+html lang="en"
+   head
+       title== @title || "Songs By Sinatra"
+       meta charset= "utf-8"
+       script src="/platform/platform.js"
+       /link rel="import" href="/components/core-header-panel/core-header-panel.html"
+       link rel="shortcut icon" href="./images/unnamed.ico"
+       link rel="stylesheet" href="/styles.css"
+       link rel="import" href="/components/paper-tabs/paper-tabs.html"
+       link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine&effect=3d"
+   body
+      header
+       div
+         img src="../images/unnamed.ico"
+         p id="banner" class="font-effect-3d" SongZ
+         img src="../images/unnamed.ico"
+       == erb :nav
+      section
+       == yield
