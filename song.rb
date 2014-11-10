@@ -21,11 +21,11 @@ end
 
 DataMapper.finalize
 
-get '/songs' do
-  halt(401,'Not Authorized') unless session[:admin]
-  @songs=Song.all
-  slim :songs
-end
+# get '/songs' do
+#   halt(401,'Not Authorized') unless session[:admin]
+#   @songs=Song.all
+#   slim :songs
+# end
 
 get '/songs/new' do
   @song = Song.new
