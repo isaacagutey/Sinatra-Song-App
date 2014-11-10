@@ -1,11 +1,9 @@
 require './main.rb'
 require 'dm-core'
 require 'dm-migrations'
-require 'sinatra/reloader' if development?
 
-configure :development do
-  DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/development.db")
-end
+
+
 
 
 class Song
