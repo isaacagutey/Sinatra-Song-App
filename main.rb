@@ -2,6 +2,7 @@ require './song.rb'
 require 'sinatra'
 require 'slim'
 require 'sass'
+#require 'sinatra/reloader' if development?
 
 configure do
   enable :sessions
@@ -40,17 +41,17 @@ get '/fake-error' do
   'There’s nothing wrong, really :P'
 end
 
-get '/environment' do
-  if development?
-    "development"
-  elsif production?
-    "production"
-  elsif test?
-    "test"
-  else
-    "who cares about the environment anyway"
-  end
-end
+# get '/environment' do
+#   if development?
+#     "development"
+#   elsif production?
+#     "production"
+#   elsif test?
+#     "test"
+#   else
+#     "who cares about the environment anyway"
+#   end
+# end
 
 get '/set/:name' do
   halt(401,'Not Authorized') unless session[:admin]
