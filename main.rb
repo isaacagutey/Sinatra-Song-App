@@ -2,7 +2,6 @@ require './song.rb'
 require 'sinatra'
 require 'slim'
 require 'sass'
-require 'sinatra/reloader' if development?
 
 configure do
   enable :sessions
