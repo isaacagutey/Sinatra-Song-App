@@ -84,3 +84,4 @@ get '/logout' do
   session.clear
   redirect to('/login')
 end
+
