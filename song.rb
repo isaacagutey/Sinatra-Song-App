@@ -3,8 +3,13 @@ require 'dm-core'
 require 'dm-migrations'
 
 
+configure :production do
+  DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/development.db")
+end
 
-
+configure :production do
+  DataMapper.setup(:default, ENV['DATABASE_URL'])
+end
 
 class Song
   include DataMapper::Resource
@@ -21,11 +26,11 @@ end
 
 DataMapper.finalize
 
-# get '/songs' do
-#   halt(401,'Not Authorized') unless session[:admin]
-#   @songs=Song.all
-#   slim :songs
-# end
+get '/songs' do
+  halt(401,'Not Authorized') unless session[:admin]
+  @songs=Song.all
+  slim :songs
+end
 
 get '/songs/new' do
   @song = Song.new
